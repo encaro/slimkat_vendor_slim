@@ -174,4 +174,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=$(SLIM_MOD_VERSION) \
     ro.slim.buildtype=$(SLIM_BUILD_TYPE)
 
-$(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call prepend-product-if-exists, vendor/extra/product.mk)
+
+# Squisher Location
+SQUISHER_SCRIPT := vendor/slim/tools/squisher1
